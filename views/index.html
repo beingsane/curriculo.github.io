@@ -1,0 +1,30 @@
+<div id="doc" class="yui-t7">
+  <header role="banner"><h1>Meu GitHub Currículo</h1></header>
+  <article role="main">
+    <div class="yui-g">
+
+      <form id="run" action="." method="get">
+        <p>
+          <input id="username" type="text" placeholder="Digite seu nome de usuário GitHub e clique em gerar" />
+          <button type="submit" id="gen">Gerar</button>
+        </p>
+      </form>
+
+    </div>
+
+
+
+
+  </article>
+
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('form#run').submit(function(e){
+        var genUser = $('#username').val();
+        document.location = document.location.pathname + "?" + genUser;
+        e.preventDefault();
+    });
+});
+</script>
